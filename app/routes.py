@@ -2,7 +2,7 @@
 from urllib import request
 from flask import render_template
 from app import app
-import os, json
+import os
 
 global ls
 ls=[]
@@ -13,8 +13,7 @@ def index(content):
 ls=ls
 @app.route('/')
 def display():
-    lis=sorted(ls, reverse=True)
-    return json.dumps(lis)
+    return sorted(ls, reverse=True)
 
 if __name__ == "__main__":
     app.run()
