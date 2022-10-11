@@ -9,14 +9,7 @@ ls=[]
 
 @app.route('/<string:content>', methods=['POST'])
 def index(content):
-    return ls.append(content)
-
-@app.route('/')
-def display():
-    return sorted(ls, reverse=True)
-
-
-
+    return content
 
 
 if __name__ == "__main__":
