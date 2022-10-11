@@ -2,7 +2,7 @@
 from urllib import request
 from flask import render_template
 from app import app
-import os, pandas as pd
+import os
 
 global ls
 ls=[]
