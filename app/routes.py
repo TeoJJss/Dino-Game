@@ -11,6 +11,13 @@ ls=[]
 def index(content):
     return content
 
+@app.route('/')
+def display(content):
+    return content
+
+
+
+
 
 if __name__ == "__main__":
     app.run()
