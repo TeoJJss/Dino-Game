@@ -13,8 +13,8 @@ def index(content):
 ls=ls
 @app.route('/')
 def display():
-    ls=sorted(ls, reverse=True)
-    return json.dumps(ls)
+    lis=sorted(ls, reverse=True)
+    return json.dumps(lis)
 
 if __name__ == "__main__":
     app.run()
