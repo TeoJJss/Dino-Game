@@ -13,7 +13,8 @@ def index(content):
 
 @app.route('/')
 def display():
-    return ls, "\n"
+    print (ls)
+    return ls
 
 if __name__ == "__main__":
     app.run()
