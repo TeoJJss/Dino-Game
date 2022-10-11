@@ -8,11 +8,11 @@ global ls
 ls=[]
 
 @app.route('/<string:content>', methods=['POST'])
-def index(content, ls):
+def index(content):
     return ls.append(content)
 
 @app.route('/')
-def display(ls):
+def display():
     return render_template("index.html", lis=ls)
 
 if __name__ == "__main__":
