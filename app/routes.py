@@ -2,7 +2,7 @@
 from urllib import request
 from flask import render_template
 from app import app
-import os
+import os, pandas as pd
 
 global ls
 ls=[]
@@ -12,9 +12,8 @@ def index(content, ls):
     return ls.append(content)
 
 @app.route('/')
-def display():
-    final=[*ls]
-    return render_template("index.html", lis=final)
+def display(ls):
+    return render_template("index.html", lis=ls)
 
 if __name__ == "__main__":
     app.run()
