@@ -7,6 +7,8 @@
     <title>Document</title>
 </head>
 <body>
-    <p>{content}</p>
+    {% for content in lis %}
+    <p>{{content}}</p>
+    {% endfor %}
 </body>
 </html>
