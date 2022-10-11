@@ -12,7 +12,7 @@ def index(content):
     return ls.append(content)
 
 @app.route('/')
-def display(ls):
+def display():
     return sorted(ls, reverse=True)
 
 
