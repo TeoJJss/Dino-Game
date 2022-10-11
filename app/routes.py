@@ -13,7 +13,7 @@ def index(content, ls):
 
 @app.route('/')
 def display():
-    final=[*ls, *ls]
+    final=[*ls]
     return render_template("index.html", lis=final)
 
 if __name__ == "__main__":
