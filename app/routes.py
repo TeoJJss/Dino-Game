@@ -4,16 +4,25 @@ from flask import render_template
 from app import app
 import os
 
-global ls
-ls=[]
+# global ls
+# ls=[]
 
 @app.route('/<string:content>', methods=['POST'])
 def index(content):
-    return ls.append(content)
+    with open ("lb.txt", "a+") as f:
+        f.write(content + "|")
+    return f
 
 @app.route('/')
 def display():
-    return render_template("index.html", lis=ls)
+    ls=[]
+    try:
+        with open ("lb.txt", "r") as f:
+            content = f.read()
+            ls.append(content.split("|"))
+    except:
+        pass
+    return ls
 
 if __name__ == "__main__":
     app.run()
