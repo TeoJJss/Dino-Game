@@ -1,5 +1,3 @@
-again, 400
-test3, 300
-testb, 200
-test, 100
-again1,400
+test3,300
+test2,200
+test1,100

@@ -26,8 +26,10 @@ def display():
     # Reversed sort
     reversed_items = sorted(items, key=lambda i: -i[1])
 
-
-    open(file, 'w+').write('\n'.join((f"\n{i[0]}, {i[1]}" for i in reversed_items)))
+    with open (file, "w+") as f:
+        for i in reversed_items:
+            f.write(f"{i[0]},{i[1]}\n")
+    # open(file, 'w+').write('\n'.join((f"\n{i[0]}, {i[1]}" for i in reversed_items)))
     # with open (file, "r") as f:
     #     for line in f:
     #         temp = line.split()
