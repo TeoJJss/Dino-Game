@@ -1,8 +1,8 @@
 # from crypt import methods
 from urllib import request
-from flask import render_template
+from flask import render_template, Response
 from app import app
-import os
+import os, json
 
 # global ls
 # ls=[]
@@ -10,7 +10,7 @@ import os
 @app.route('/<string:content>', methods=['POST'])
 def index(content):
     with open ("lb.txt", "a+") as f:
-        f.write(content + "|")
+        f.write(content + "\n")
     return f
 
 @app.route('/')
@@ -18,11 +18,11 @@ def display():
     ls=[]
     try:
         with open ("lb.txt", "r") as f:
-            content = f.read()
-            ls.append(content.split("|"))
+            content = f.readlines()
+            return render_template("index.html", lis=content)
     except:
         pass
-    return render_template("index.html", lis=ls)
+    
 
 if __name__ == "__main__":
     app.run()

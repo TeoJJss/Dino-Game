@@ -7,8 +7,13 @@
     <title>Document</title>
 </head>
 <body>
-    {% for content in lis %}
-    <p>{{content}}<BR></p><BR>
-    {% endfor %}
+    <table style="width:100%">
+        {% for content in lis %}
+        <tr>
+            <td> {{ content }} </td>
+        </tr>
+        {% endfor %}
+        <tr>
+    </table>
 </body>
 </html>
