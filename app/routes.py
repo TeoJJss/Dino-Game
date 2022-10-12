@@ -43,11 +43,5 @@ def display():
     content=open(file).readlines()
     return render_template("index.html", lis=content)
 
-def atoi(text):
-    return int(text) if text.isdigit() else text
-
-def natural_keys(text):
-    return [ atoi(c) for c in re.split(r'(\d+)', text) ]
-
 if __name__ == "__main__":
     app.run()
