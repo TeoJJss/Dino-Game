@@ -22,7 +22,7 @@ def display():
             ls.append(content.split("|"))
     except:
         pass
-    return ls
+    return render_template("index.html", lis=ls)
 
 if __name__ == "__main__":
     app.run()
