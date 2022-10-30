@@ -414,6 +414,7 @@ def menu(death_count):
             Tk().wm_withdraw()
             m=f"{username}, your score is {points}, \n Show this screen to commitee if asked"
             tkinter.messagebox.showinfo(title="Your score", message=m)
+            # os.startfile('proof.png')
             time.sleep(2)
             pygame.display.quit()
             pygame.quit()
@@ -422,31 +423,6 @@ def menu(death_count):
         SCREEN.blit(text, textRect)
         SCREEN.blit(RUNNING[0], (SCREEN_WIDTH // 2 - 20, SCREEN_HEIGHT // 2 - 140))
         pygame.display.update()
-        
-# def append_values(spreadsheet_id, range_name, value_input_option, _values):
-#         creds= None
-#         # pylint: disable=maybe-no-member
-#         try:
-#             service = discovery.build('sheets', 'v4', credentials=creds)
-
-#             values = [
-#                 [
-#                     # Cell values ...
-#                 ],
-#                 # Additional rows ...
-#             ]
-#             body = {
-#                 'values': values
-#             }
-#             result = service.spreadsheets().values().append(
-#                 spreadsheetId=spreadsheet_id, range=range_name,
-#                 valueInputOption=value_input_option, body=body).execute()
-#             print(f"{(result.get('updates').get('updatedCells'))} cells appended.")
-#             return result
-
-#         except HttpError as error:
-#             print(f"An error occurred: {error}")
-#             return error
                  
 
 
