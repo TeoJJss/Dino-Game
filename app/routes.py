@@ -47,6 +47,7 @@ def display():
 def reset():
     file = open("lb.txt","w")
     file.close()
+    return render_template("index.html", lis="")
 
 if __name__ == "__main__":
     app.run()
