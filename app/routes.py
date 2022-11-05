@@ -43,5 +43,10 @@ def display():
     content=open(file).readlines()
     return render_template("index.html", lis=content)
 
+@app.route('/reset')
+def reset():
+    file = open("lb.txt","w")
+    file.close()
+
 if __name__ == "__main__":
     app.run()
