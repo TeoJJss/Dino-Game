@@ -1,7 +1,7 @@
 # from crypt import methods
 import string
 from urllib import request
-from flask import render_template, Response
+from flask import render_template, Response, url_for, redirect
 from app import app
 import os, json, re
 
@@ -47,7 +47,7 @@ def display():
 def reset():
     file = open("lb.txt","w")
     file.close()
-    return render_template("index.html", lis="")
+    return redirect(url_for("display"))
 
 if __name__ == "__main__":
     app.run()
