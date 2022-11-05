@@ -7,6 +7,11 @@
     <title>Leaderboard</title>
 </head>
 <body>
+    <script>
+        function myFunction() {
+          confirm("Record will be deleted. Are you sure?");
+        }
+        </script>
     <table style="border:1px solid black;margin-left:auto;margin-right:auto;">
         {% for content in lis %}
         <tr>
@@ -15,6 +20,6 @@
         {% endfor %}
         <tr>
     </table>
-    <a href="/reset">Reset</a>
+    <a href="/reset" onclick="myFunction()">Reset</a>
 </body>
 </html>
