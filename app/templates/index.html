@@ -7,11 +7,6 @@
     <title>Leaderboard</title>
 </head>
 <body>
-    <script>
-        function myFunction() {
-          confirm("Record will be deleted. Are you sure?");
-        }
-        </script>
     <table style="border:1px solid black;margin-left:auto;margin-right:auto;">
         {% for content in lis %}
         <tr>
@@ -20,7 +15,7 @@
         {% endfor %}
         <tr>
     </table>
-    <center><button><a href="/reset" onclick="myFunction()">Reset</a></button></center>
+    <center><button><a href="/reset" onclick="return confirm('Are you sure? Record will be removed')">Reset</a></button></center>
     <br /><br /><br /><br /><br />
     <small>Please click <b>refresh</b> button in your browser to accept new incoming scores</small><br />
     <small>click <b>"reset"</b> to remove all records</small><br />
