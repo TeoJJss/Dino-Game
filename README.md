@@ -16,4 +16,9 @@ python -m venv venv
 venv\Scripts\activate
 pip install -r requirements.txt
 python chromedino.py
+```  
+
+Run the following code to build an exe at "build/" folder.  
+```
+python setup.py
 ```
