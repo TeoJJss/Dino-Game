@@ -60,7 +60,9 @@ BG = pygame.image.load(os.path.join("assets/Other", "Track.png"))
 
 FONT_COLOR=(0,0,0)
 
-
+# Change the domain below to your flask localhost URL
+global domain
+domain = "http://127.0.0.1:5000"
 
 class Dinosaur:
     X_POS = 80
@@ -404,7 +406,7 @@ def menu(death_count):
             SCREEN.blit(hs_score_text, hs_score_rect)
             # send(f"{username} , {points}")
             body = f'{username},{points}'
-            post_request = requests.post(f"https://dino-jj.herokuapp.com/{body}")
+            post_request = requests.post(f"{domain}/{body}")
             print(post_request)
 
             # Proof of the game
