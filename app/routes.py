@@ -20,7 +20,7 @@ def display():
     file="lb.txt"
 
     lines = open(file).read().splitlines()
-    splitted = (line.split(',') for line in lines)
+    splitted = (line.rsplit(',', 1) for line in lines)
     items = ((i[0], int(i[1])) for i in splitted)
 
     # Reversed sort
