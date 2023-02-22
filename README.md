@@ -10,6 +10,8 @@ If there's any copyright issue, please contact me to remove.
 This code is the Dino application, built using PyGame.  
 The PyGame will send the score to the leaderboard via HTTP POST Request.  
 
+<b>Check out and run <a href="https://github.com/TeoJJss/Dino-Game/tree/leaderboard">leaderboard</a> repository, before running this PyGame. </b>
+
 To run: 
 ```
 python -m venv venv
