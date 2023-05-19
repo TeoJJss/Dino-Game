@@ -22,5 +22,5 @@ python chromedino.py
 
 Run the following code to build an exe at "build/" folder.  
 ```
-python setup.py
+python setup.py build
 ```
